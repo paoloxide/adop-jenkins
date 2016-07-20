@@ -1,0 +1,15 @@
+jenkins:
+  image: bzon/centos-adop-jenkins
+  container_name: test-jenkins
+  ports:
+   - "8081:8080"
+   - "50001:50000"
+  environment:
+   ADOP_MAVEN_ENABLED: "true"
+   ADOP_ANT_ENABLED: "true"
+   ADOP_LDAP_ENABLED: "false"
+   ADOP_SONAR_ENABLED: "false"
+   ADOP_NODEJS_ENABLED: "true"
+   ADOP_GERRIT_ENABLED: "false"
+   SECURITY_ENABLED: "false"
+   JENKINS_CLI_DISABLED: "false"
